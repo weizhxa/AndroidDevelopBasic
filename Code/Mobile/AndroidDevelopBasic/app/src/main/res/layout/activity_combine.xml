@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.hjq.bar.TitleBar
+        android:id="@+id/titlebar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:barStyle="night"
+        app:leftTitle="返回"
+        app:title="综合案例"
+        app:titleSize="22sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_5dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:drawablePadding="6dp"
+                android:textSize="18sp"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen_5dp"
+                android:drawableLeft="@mipmap/user_name_60"
+                android:text="用户名" />
+
+            <EditText
+                android:id="@+id/et_username"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_user"
+            android:layout_margin="@dimen/dimen_5dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:textSize="18sp"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen_5dp"
+                android:drawableLeft="@mipmap/pwd_60"
+                android:text="密  码" />
+
+            <EditText
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <Button
+            android:onClick="btn_login"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:textSize="18sp"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/ll_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="登录" />
+
+    </RelativeLayout>
+
+</LinearLayout>
